@@ -2,21 +2,17 @@
 #include <iostream>
 using namespace std;
 
-bool hasDuplicate(int a[], int size)
-{
+//Duplicate in Array
+bool hasDuplicate(int a[], int size) {
     int index, current;
-    for (int i = 0; i < size; i++)
-    {
-        while (a[i] != i+1)        //check if value at a[i] is in the correct position
-        {
+    for (int i = 0; i < size; i++) {
+        while (a[i] != i+1) {      //check if value at a[i] is in the correct position
             index = a[i]-1;        //index is position where it should go
             current = a[index];    //current value at index
-            if (a[i] == current)
-            {
+            if (a[i] == current) {
                 return true;       //duplicate if value appears in both places
             }
-            else
-            {
+            else {
                 a[index] = a[i];   //swap
                 a[i] = current;
             }

@@ -1,6 +1,7 @@
 #include <iostream>
 using namespace std;
 
+//PRINT ALL PERMUTATIONS
 void printPermutations(string word, string current, int size) {
     if (current.length() == size) {
         cout << current << endl;
